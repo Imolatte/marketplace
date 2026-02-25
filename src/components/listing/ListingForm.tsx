@@ -9,11 +9,15 @@ import {
   InputLabel,
   Button,
   Typography,
+  Chip,
+  IconButton,
 } from '@mui/material';
+import { Close } from '@mui/icons-material';
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod/v4';
 import { useTranslations } from 'next-intl';
+import { useState } from 'react';
 
 const CATEGORIES = ['Electronics', 'Clothing', 'Home', 'Sports', 'Books', 'Toys', 'Other'];
 
@@ -36,10 +40,13 @@ interface ListingFormProps {
 
 export function ListingForm({ defaultValues, onSubmit, isLoading }: ListingFormProps) {
   const t = useTranslations('listing');
+  const [imageUrl, setImageUrl] = useState('');
   const {
     register,
     handleSubmit,
     control,
+    setValue,
+    watch,
     formState: { errors },
   } = useForm<ListingFormData>({
     resolver: zodResolver(listingSchema),
@@ -53,6 +60,26 @@ export function ListingForm({ defaultValues, onSubmit, isLoading }: ListingFormP
       ...defaultValues,
     },
   });
+
+  const images = watch('images');
+
+  const addImage = () => {
+    const trimmed = imageUrl.trim();
+    if (!trimmed) return;
+    try {
+      new URL(trimmed);
+      if (!images.includes(trimmed)) {
+        setValue('images', [...images, trimmed], { shouldValidate: true });
+      }
+      setImageUrl('');
+    } catch {
+      // invalid URL — ignore
+    }
+  };
+
+  const removeImage = (index: number) => {
+    setValue('images', images.filter((_, i) => i !== index), { shouldValidate: true });
+  };
 
   return (
     <Box component="form" onSubmit={handleSubmit(onSubmit)} sx={{ display: 'flex', flexDirection: 'column', gap: 2.5 }}>
@@ -116,9 +143,49 @@ export function ListingForm({ defaultValues, onSubmit, isLoading }: ListingFormP
         )}
       />
 
-      <Typography variant="body2" color="text.secondary">
-        {t('imagesPlaceholder')}
-      </Typography>
+      <Box>
+        <Typography variant="subtitle2" gutterBottom>
+          {t('images')}
+        </Typography>
+        <Box sx={{ display: 'flex', gap: 1 }}>
+          <TextField
+            size="small"
+            label={t('imageUrl')}
+            placeholder={t('imageUrlPlaceholder')}
+            value={imageUrl}
+            onChange={(e) => setImageUrl(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                e.preventDefault();
+                addImage();
+              }
+            }}
+            fullWidth
+          />
+          <Button variant="outlined" onClick={addImage} sx={{ whiteSpace: 'nowrap' }}>
+            {t('addImage')}
+          </Button>
+        </Box>
+        {errors.images && (
+          <Typography variant="caption" color="error" sx={{ mt: 0.5 }}>
+            {errors.images.message}
+          </Typography>
+        )}
+        {images.length > 0 && (
+          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mt: 1.5 }}>
+            {images.map((url, index) => (
+              <Chip
+                key={index}
+                label={url.length > 40 ? url.slice(0, 37) + '...' : url}
+                onDelete={() => removeImage(index)}
+                deleteIcon={<IconButton size="small"><Close fontSize="small" /></IconButton>}
+                variant="outlined"
+                sx={{ maxWidth: 300 }}
+              />
+            ))}
+          </Box>
+        )}
+      </Box>
 
       <Button
         type="submit"

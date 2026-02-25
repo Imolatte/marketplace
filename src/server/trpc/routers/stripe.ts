@@ -20,6 +20,10 @@ export const stripeRouter = router({
         throw new Error('Cannot buy your own listing');
       }
 
+      if (!stripe) {
+        throw new Error('Stripe is not configured. Set STRIPE_SECRET_KEY in your environment variables.');
+      }
+
       const order = await ctx.prisma.order.create({
         data: {
           totalAmount: listing.price,

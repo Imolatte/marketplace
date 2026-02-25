@@ -1,16 +1,25 @@
 'use client';
 
 import { AppBar, Toolbar, Typography, Button, Box, IconButton, Menu, MenuItem } from '@mui/material';
-import { Favorite, Add, AccountCircle } from '@mui/icons-material';
-import { Link } from '@/i18n/navigation';
+import { Favorite, Add, AccountCircle, Language } from '@mui/icons-material';
+import { Link, usePathname, useRouter } from '@/i18n/navigation';
 import { useSession, signOut } from 'next-auth/react';
 import { useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 export function Header() {
   const { data: session } = useSession();
   const t = useTranslations('common');
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const [langAnchor, setLangAnchor] = useState<null | HTMLElement>(null);
+
+  const switchLocale = (newLocale: string) => {
+    router.replace(pathname, { locale: newLocale });
+    setLangAnchor(null);
+  };
 
   return (
     <AppBar position="sticky" color="default" elevation={1}>
@@ -28,6 +37,25 @@ export function Header() {
             {t('browse')}
           </Button>
         </Link>
+
+        <IconButton onClick={(e) => setLangAnchor(e.currentTarget)} color="inherit" size="small" sx={{ mx: 0.5 }}>
+          <Language fontSize="small" />
+          <Typography variant="caption" sx={{ ml: 0.5, textTransform: 'uppercase', fontWeight: 600 }}>
+            {locale}
+          </Typography>
+        </IconButton>
+        <Menu
+          anchorEl={langAnchor}
+          open={Boolean(langAnchor)}
+          onClose={() => setLangAnchor(null)}
+        >
+          <MenuItem selected={locale === 'en'} onClick={() => switchLocale('en')}>
+            English
+          </MenuItem>
+          <MenuItem selected={locale === 'ru'} onClick={() => switchLocale('ru')}>
+            Русский
+          </MenuItem>
+        </Menu>
 
         {session?.user ? (
           <>

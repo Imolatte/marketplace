@@ -18,8 +18,16 @@
   "home": {
     "title": "SecondHand Marketplace",
     "subtitle": "Buy and sell pre-owned items",
-    "featured": "Featured Listings",
-    "viewAll": "View All"
+    "featured": "Latest Listings",
+    "viewAll": "Browse All Listings",
+    "categories": "Shop by Category",
+    "howItWorks": "How It Works",
+    "step1Title": "Find",
+    "step1Desc": "Browse thousands of pre-owned items with powerful search and filters",
+    "step2Title": "Buy",
+    "step2Desc": "Pay securely with Stripe. Your payment is protected",
+    "step3Title": "Enjoy",
+    "step3Desc": "Get your item delivered and leave a review for the seller"
   },
   "listing": {
     "search": "Search",
@@ -39,7 +47,9 @@
     "description": "Description",
     "price": "Price",
     "images": "Images",
-    "imagesPlaceholder": "Image upload coming soon. For now, paste image URLs.",
+    "imageUrl": "Image URL",
+    "imageUrlPlaceholder": "https://example.com/image.jpg",
+    "addImage": "Add Image",
     "submit": "Create Listing",
     "submitting": "Creating...",
     "createListing": "Create Listing",

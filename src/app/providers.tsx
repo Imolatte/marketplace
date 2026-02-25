@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { httpBatchLink } from '@trpc/client';
 import { SessionProvider } from 'next-auth/react';
-import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
+import { ThemeProvider, createTheme } from '@mui/material';
 import superjson from 'superjson';
 
 import { trpc } from '@/lib/trpc/client';
@@ -47,7 +47,6 @@ export function Providers({ children }: { children: React.ReactNode }) {
       <QueryClientProvider client={queryClient}>
         <SessionProvider>
           <ThemeProvider theme={theme}>
-            <CssBaseline />
             {children}
           </ThemeProvider>
         </SessionProvider>

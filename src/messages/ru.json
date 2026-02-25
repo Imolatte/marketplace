@@ -18,8 +18,16 @@
   "home": {
     "title": "SecondHand Маркетплейс",
     "subtitle": "Покупайте и продавайте б/у вещи",
-    "featured": "Рекомендуемые",
-    "viewAll": "Смотреть все"
+    "featured": "Новые объявления",
+    "viewAll": "Все объявления",
+    "categories": "Категории",
+    "howItWorks": "Как это работает",
+    "step1Title": "Найди",
+    "step1Desc": "Ищи среди тысяч товаров с удобными фильтрами и поиском",
+    "step2Title": "Купи",
+    "step2Desc": "Оплачивай безопасно через Stripe. Платёж защищён",
+    "step3Title": "Пользуйся",
+    "step3Desc": "Получи товар и оставь отзыв продавцу"
   },
   "listing": {
     "search": "Поиск",
@@ -39,7 +47,9 @@
     "description": "Описание",
     "price": "Цена",
     "images": "Изображения",
-    "imagesPlaceholder": "Загрузка изображений скоро. Пока вставьте URL.",
+    "imageUrl": "URL изображения",
+    "imageUrlPlaceholder": "https://example.com/image.jpg",
+    "addImage": "Добавить",
     "submit": "Создать объявление",
     "submitting": "Создание...",
     "createListing": "Создать объявление",
