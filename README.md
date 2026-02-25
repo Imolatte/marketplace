@@ -2,6 +2,8 @@
 
 A full-stack marketplace for buying and selling pre-owned items. Built as a portfolio project demonstrating modern web development practices.
 
+**Live Demo:** [marketplace-omega-three.vercel.app](https://marketplace-omega-three.vercel.app)
+
 ## Tech Stack
 
 - **Framework:** Next.js 16 (App Router, Server Components)
@@ -67,7 +69,7 @@ src/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/marketplace.git
+git clone https://github.com/Imolatte/marketplace.git
 cd marketplace
 ```
 
@@ -152,12 +154,13 @@ Stripe Checkout Sessions with webhook handling:
 
 ## Deployment
 
-Optimized for deployment on Vercel with Neon PostgreSQL:
+Deployed on [Vercel](https://vercel.com) with [Neon](https://neon.tech) PostgreSQL.
 
-1. Push to GitHub
-2. Connect to Vercel
-3. Set environment variables
-4. Deploy
+Required environment variables for production:
+- `DATABASE_URL` — Neon PostgreSQL connection string
+- `NEXTAUTH_SECRET` — random secret (`openssl rand -base64 32`)
+- `NEXTAUTH_URL` — your deployed URL
+- `NEXT_PUBLIC_APP_URL` — your deployed URL
 
 ## License
 
