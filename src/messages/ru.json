@@ -1,0 +1,107 @@
+{
+  "common": {
+    "browse": "Каталог",
+    "signIn": "Войти",
+    "signOut": "Выйти",
+    "profile": "Профиль",
+    "orders": "Заказы",
+    "searchPlaceholder": "Поиск объявлений...",
+    "loading": "Загрузка...",
+    "error": "Что-то пошло не так",
+    "noResults": "Ничего не найдено",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "delete": "Удалить",
+    "edit": "Редактировать",
+    "back": "Назад"
+  },
+  "home": {
+    "title": "SecondHand Маркетплейс",
+    "subtitle": "Покупайте и продавайте б/у вещи",
+    "featured": "Рекомендуемые",
+    "viewAll": "Смотреть все"
+  },
+  "listing": {
+    "search": "Поиск",
+    "category": "Категория",
+    "condition": "Состояние",
+    "conditionLabel": "Состояние",
+    "allCategories": "Все категории",
+    "allConditions": "Любое состояние",
+    "priceRange": "Диапазон цен",
+    "sortBy": "Сортировка",
+    "newest": "Сначала новые",
+    "oldest": "Сначала старые",
+    "priceLowToHigh": "Цена: по возрастанию",
+    "priceHighToLow": "Цена: по убыванию",
+    "resetFilters": "Сбросить фильтры",
+    "title": "Название",
+    "description": "Описание",
+    "price": "Цена",
+    "images": "Изображения",
+    "imagesPlaceholder": "Загрузка изображений скоро. Пока вставьте URL.",
+    "submit": "Создать объявление",
+    "submitting": "Создание...",
+    "createListing": "Создать объявление",
+    "editListing": "Редактировать",
+    "deleteListing": "Удалить объявление",
+    "buyNow": "Купить",
+    "seller": "Продавец",
+    "postedOn": "Опубликовано",
+    "conditionValue": {
+      "NEW": "Новое",
+      "LIKE_NEW": "Как новое",
+      "GOOD": "Хорошее",
+      "FAIR": "Удовлетворительное"
+    },
+    "statusValue": {
+      "ACTIVE": "Активно",
+      "SOLD": "Продано",
+      "PAUSED": "Приостановлено"
+    }
+  },
+  "auth": {
+    "login": "Войти",
+    "register": "Создать аккаунт",
+    "email": "Email",
+    "password": "Пароль",
+    "name": "Имя",
+    "confirmPassword": "Подтвердите пароль",
+    "noAccount": "Нет аккаунта?",
+    "hasAccount": "Уже есть аккаунт?",
+    "orContinueWith": "Или войти через",
+    "google": "Google"
+  },
+  "profile": {
+    "myProfile": "Мой профиль",
+    "myListings": "Мои объявления",
+    "myOrders": "Мои покупки",
+    "mySales": "Мои продажи",
+    "favorites": "Избранное",
+    "memberSince": "На сайте с",
+    "noListings": "У вас пока нет объявлений",
+    "noOrders": "У вас пока нет покупок",
+    "noFavorites": "У вас пока нет избранного"
+  },
+  "order": {
+    "status": "Статус",
+    "total": "Итого",
+    "statusValue": {
+      "PENDING": "Ожидание",
+      "PAID": "Оплачен",
+      "SHIPPED": "Отправлен",
+      "DELIVERED": "Доставлен",
+      "CANCELLED": "Отменён"
+    },
+    "markShipped": "Отметить отправленным",
+    "confirmDelivery": "Подтвердить получение"
+  },
+  "review": {
+    "reviews": "Отзывы",
+    "writeReview": "Написать отзыв",
+    "rating": "Оценка",
+    "comment": "Комментарий",
+    "submit": "Отправить отзыв",
+    "noReviews": "Отзывов пока нет"
+  }
+}

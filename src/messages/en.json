@@ -1,0 +1,107 @@
+{
+  "common": {
+    "browse": "Browse",
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "profile": "Profile",
+    "orders": "Orders",
+    "searchPlaceholder": "Search listings...",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "noResults": "No results found",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back"
+  },
+  "home": {
+    "title": "SecondHand Marketplace",
+    "subtitle": "Buy and sell pre-owned items",
+    "featured": "Featured Listings",
+    "viewAll": "View All"
+  },
+  "listing": {
+    "search": "Search",
+    "category": "Category",
+    "condition": "Condition",
+    "conditionLabel": "Condition",
+    "allCategories": "All Categories",
+    "allConditions": "All Conditions",
+    "priceRange": "Price Range",
+    "sortBy": "Sort By",
+    "newest": "Newest First",
+    "oldest": "Oldest First",
+    "priceLowToHigh": "Price: Low to High",
+    "priceHighToLow": "Price: High to Low",
+    "resetFilters": "Reset Filters",
+    "title": "Title",
+    "description": "Description",
+    "price": "Price",
+    "images": "Images",
+    "imagesPlaceholder": "Image upload coming soon. For now, paste image URLs.",
+    "submit": "Create Listing",
+    "submitting": "Creating...",
+    "createListing": "Create Listing",
+    "editListing": "Edit Listing",
+    "deleteListing": "Delete Listing",
+    "buyNow": "Buy Now",
+    "seller": "Seller",
+    "postedOn": "Posted on",
+    "conditionValue": {
+      "NEW": "New",
+      "LIKE_NEW": "Like New",
+      "GOOD": "Good",
+      "FAIR": "Fair"
+    },
+    "statusValue": {
+      "ACTIVE": "Active",
+      "SOLD": "Sold",
+      "PAUSED": "Paused"
+    }
+  },
+  "auth": {
+    "login": "Log In",
+    "register": "Create Account",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "confirmPassword": "Confirm Password",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "orContinueWith": "Or continue with",
+    "google": "Google"
+  },
+  "profile": {
+    "myProfile": "My Profile",
+    "myListings": "My Listings",
+    "myOrders": "My Orders",
+    "mySales": "My Sales",
+    "favorites": "Favorites",
+    "memberSince": "Member since",
+    "noListings": "You haven't created any listings yet",
+    "noOrders": "You haven't made any purchases yet",
+    "noFavorites": "You haven't favorited anything yet"
+  },
+  "order": {
+    "status": "Status",
+    "total": "Total",
+    "statusValue": {
+      "PENDING": "Pending",
+      "PAID": "Paid",
+      "SHIPPED": "Shipped",
+      "DELIVERED": "Delivered",
+      "CANCELLED": "Cancelled"
+    },
+    "markShipped": "Mark as Shipped",
+    "confirmDelivery": "Confirm Delivery"
+  },
+  "review": {
+    "reviews": "Reviews",
+    "writeReview": "Write a Review",
+    "rating": "Rating",
+    "comment": "Comment",
+    "submit": "Submit Review",
+    "noReviews": "No reviews yet"
+  }
+}
